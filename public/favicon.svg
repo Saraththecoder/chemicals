@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32">
+  <defs>
+    <linearGradient id="blueGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0B4F6C" />
+      <stop offset="100%" stop-color="#062c3d" />
+    </linearGradient>
+    <linearGradient id="copperGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#d4783a" />
+      <stop offset="100%" stop-color="#C76B2A" />
+    </linearGradient>
+  </defs>
+  <!-- Main circle background -->
+  <circle cx="16" cy="16" r="15" fill="url(#blueGrad)" stroke="rgba(255,255,255,0.15)" stroke-width="1"/>
+  <!-- Stylized droplet representing water -->
+  <path d="M16 6.5 C12.5 11.5 10.5 15.5 10.5 19 A 5.5 5.5 0 0 0 21.5 19 C21.5 15.5 19.5 11.5 16 6.5 Z" fill="#ffffff" />
+  <!-- Inner core droplet representing copper/chemicals -->
+  <path d="M16 11.5 C14.2 14.8 12.8 17.5 12.8 19.5 A 3.2 3.2 0 0 0 19.2 19.5 C19.2 17.5 17.8 14.8 16 11.5 Z" fill="url(#copperGrad)" />
+</svg>

@@ -1,0 +1,154 @@
+/* ============================================================
+   SV Industrial Watertech & Services — Global Design System
+   ============================================================ */
+
+:root {
+  --blue-900:  #062c3d;
+  --blue-800:  #083d56;
+  --blue-700:  #0B4F6C;
+  --blue-600:  #0e6187;
+  --blue-500:  #1174a3;
+  --blue-400:  #1a8fc4;
+  --blue-100:  #d6edf7;
+  --blue-50:   #edf6fb;
+
+  --copper-700: #a3541f;
+  --copper-600: #b56025;
+  --copper-500: #C76B2A;
+  --copper-400: #d4783a;
+  --copper-300: #e0924d;
+  --copper-100: #f7e0cc;
+  --copper-50:  #fdf3ea;
+
+  --white:    #ffffff;
+  --grey-50:  #F5F7FA;
+  --grey-100: #eaecf0;
+  --grey-200: #d0d5dd;
+  --grey-300: #98a2b3;
+  --grey-500: #667085;
+  --grey-700: #475467;
+  --grey-900: #333333;
+
+  --font-body: 'Inter', sans-serif;
+  --font-head: 'Outfit', sans-serif;
+
+  --shadow-sm:  0 1px 3px rgba(0,0,0,.10), 0 1px 2px rgba(0,0,0,.06);
+  --shadow-md:  0 4px 16px rgba(11,79,108,.14);
+  --shadow-lg:  0 8px 32px rgba(11,79,108,.18);
+  --shadow-xl:  0 16px 48px rgba(11,79,108,.22);
+
+  --radius-sm:   6px;
+  --radius-md:   12px;
+  --radius-lg:   20px;
+  --radius-xl:   32px;
+  --radius-full: 9999px;
+
+  --transition:      .25s cubic-bezier(.4,0,.2,1);
+  --transition-slow: .45s cubic-bezier(.4,0,.2,1);
+
+  --nav-h: 80px;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+
+body {
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--grey-900);
+  background: var(--white);
+  overflow-x: hidden;
+}
+
+img { max-width: 100%; height: auto; display: block; }
+a   { text-decoration: none; color: inherit; }
+ul  { list-style: none; }
+button { cursor: pointer; border: none; background: none; font: inherit; }
+
+h1,h2,h3,h4,h5,h6 {
+  font-family: var(--font-head);
+  line-height: 1.2;
+  color: var(--grey-900);
+  font-weight: 700;
+}
+h1 { font-size: clamp(2rem, 5vw, 3.5rem); }
+h2 { font-size: clamp(1.6rem, 3.5vw, 2.5rem); }
+h3 { font-size: clamp(1.15rem, 2.5vw, 1.55rem); }
+h4 { font-size: 1.15rem; }
+p  { color: var(--grey-700); line-height: 1.75; }
+
+/* Keyframes */
+@keyframes pulse-dot {
+  0%,100% { opacity:1; transform:scale(1); }
+  50%      { opacity:.5; transform:scale(1.5); }
+}
+@keyframes fab-pulse {
+  0%   { transform:scale(1); opacity:.6; }
+  70%  { transform:scale(1.4); opacity:0; }
+  100% { transform:scale(1); opacity:0; }
+}
+@keyframes fadeInUp {
+  from { opacity:0; transform:translateY(28px); }
+  to   { opacity:1; transform:translateY(0); }
+}
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+@keyframes wiggle {
+  0%, 100% { transform: rotate(0); }
+  25% { transform: rotate(-10deg) scale(1.05); }
+  75% { transform: rotate(10deg) scale(1.05); }
+}
+
+.anim-spin { animation: spin 1s linear infinite; }
+
+/* Micro-animations */
+.btn svg, .fab svg {
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.btn:hover svg, .fab:hover svg {
+  animation: wiggle 0.5s ease infinite;
+}
+
+/* Card hover icon micro-rotations */
+.card, .row-card {
+  transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1), box-shadow 0.4s cubic-bezier(0.165, 0.84, 0.44, 1), border-color 0.4s ease;
+}
+.card:hover, .row-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-xl);
+}
+.card:hover .card-icon svg {
+  transform: rotate(8deg) scale(1.1);
+}
+.row-card:hover .v-icon-box svg {
+  transform: rotate(8deg) scale(1.1);
+}
+
+/* Product chips hover lift */
+.product-chip {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.product-chip:hover {
+  transform: translateY(-3px) scale(1.03);
+  border-color: var(--blue-500);
+  box-shadow: var(--shadow-md);
+}
+
+/* Scroll reveal */
+.reveal {
+  opacity: 0;
+  transform: translateY(32px);
+  transition: opacity .65s cubic-bezier(0.4, 0, 0.2, 1), transform .65s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.reveal.in-view {
+  opacity: 1;
+  transform: translateY(0);
+}
+.reveal-delay-1 { transition-delay: .1s; }
+.reveal-delay-2 { transition-delay: .2s; }
+.reveal-delay-3 { transition-delay: .3s; }
+.reveal-delay-4 { transition-delay: .4s; }
+.reveal-delay-5 { transition-delay: .5s; }
