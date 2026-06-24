@@ -26,7 +26,7 @@ export default function Footer() {
           <div className="footer-col">
             <h4>Quick Links</h4>
             <ul>
-              {[['/', 'Home'], ['/about', 'About Us'], ['/services', 'Services'], ['/chemicals', 'Chemical Solutions'], ['/industries', 'Industries'], ['/contact', 'Contact']].map(([to, label]) => (
+              {[['/', 'Home'], ['/about', 'About Us'], ['/services', 'Services'], ['/chemicals', 'Chemical Solutions'], ['/estimate', 'Cost Estimator'], ['/industries', 'Industries'], ['/contact', 'Contact']].map(([to, label]) => (
                 <li key={to}><Link to={to}>{label}</Link></li>
               ))}
             </ul>
@@ -68,6 +68,7 @@ export default function Footer() {
           <p>© 2025 Sri Viranjaneya (SV) Industrial Watertech &amp; Services. All Rights Reserved.</p>
           <div className="footer-bottom-links">
             <Link to="/contact">Get Quote</Link>
+            <Link to="/estimate">Cost Estimator</Link>
             <Link to="/services">Services</Link>
             <Link to="/about">About</Link>
           </div>

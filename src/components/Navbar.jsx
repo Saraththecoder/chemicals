@@ -17,6 +17,7 @@ const navLinks = [
   { to: '/about', label: 'About' },
   { to: '/services', label: 'Services' },
   { to: '/chemicals', label: 'Chemicals' },
+  { to: '/estimate', label: 'Estimate' },
   { to: '/industries', label: 'Industries' },
   { to: '/contact', label: 'Contact' },
 ]
@@ -65,7 +66,7 @@ export default function Navbar() {
             >
               <WaIcon /> WhatsApp
             </a>
-            <Link to="/contact" className="btn btn-copper" id="navQuote" style={{ padding: '10px 22px', fontSize: '0.9rem' }}>Get Quote</Link>
+            <Link to="/contact" className="btn btn-copper" id="navQuote">Get Quote</Link>
           </div>
 
           <button

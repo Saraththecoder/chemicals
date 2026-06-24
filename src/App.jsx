@@ -10,6 +10,7 @@ import Services from './pages/Services'
 import Chemicals from './pages/Chemicals'
 import Industries from './pages/Industries'
 import Contact from './pages/Contact'
+import Estimate from './pages/Estimate'
 
 function ScrollToTop() {
   const { pathname } = useLocation()
@@ -22,6 +23,7 @@ function ScrollToTop() {
       '/chemicals': 'Water Treatment Chemicals Portfolio | SV Industrial Watertech',
       '/industries': 'Industries Served | SV Industrial Watertech & Services',
       '/contact': 'Request a Quote & Contact | SV Industrial Watertech',
+      '/estimate': 'Instant Service Price Estimate | SV Industrial Watertech',
     }
     document.title = titles[pathname] || 'SV Industrial Watertech & Services'
   }, [pathname])
@@ -40,6 +42,7 @@ export default function App() {
         <Route path="/chemicals" element={<Chemicals />} />
         <Route path="/industries" element={<Industries />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="/estimate" element={<Estimate />} />
       </Routes>
       <Footer />
       <FloatingCTAs />
