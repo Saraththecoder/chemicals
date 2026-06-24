@@ -23,16 +23,9 @@ const navLinks = [
 ]
 
 export default function Navbar() {
-  const [scrolled, setScrolled] = useState(false)
+  const scrolled = true
   const [menuOpen, setMenuOpen] = useState(false)
   const location = useLocation()
-
-  useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 20)
-    window.addEventListener('scroll', onScroll, { passive: true })
-    onScroll()
-    return () => window.removeEventListener('scroll', onScroll)
-  }, [])
 
   useEffect(() => { setMenuOpen(false) }, [location])
 
