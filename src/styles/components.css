@@ -76,22 +76,41 @@
 /* ── Navbar ──────────────────────────────────────────────────── */
 .nav {
   position: fixed; top: 0; left: 0; right: 0;
+  width: 100% !important;
+  margin: 0 !important;
   z-index: 1000; height: var(--nav-h);
   display: flex; align-items: center;
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   border-bottom: 1px solid rgba(255, 255, 255, 0.08);
   
-  /* Glassmorphism applied uniformly across entire width */
-  background: rgba(6, 44, 61, 0.45);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
+  /* Glassmorphism applied uniformly across the entire navbar width */
+  background: rgba(6, 44, 61, 0.45) !important;
+  backdrop-filter: blur(16px) !important;
+  -webkit-backdrop-filter: blur(16px) !important;
+}
+.nav::before,
+.nav::after {
+  content: none !important;
+  display: none !important;
 }
 .nav.scrolled {
-  background: rgba(255, 255, 255, 0.82);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
-  box-shadow: 0 4px 30px rgba(11, 79, 108, 0.08);
-  border-bottom: 1px solid rgba(11, 79, 108, 0.06);
+  background: rgba(255, 255, 255, 0.82) !important;
+  backdrop-filter: blur(16px) !important;
+  -webkit-backdrop-filter: blur(16px) !important;
+  box-shadow: 0 4px 30px rgba(11, 79, 108, 0.08) !important;
+  border-bottom: 1px solid rgba(11, 79, 108, 0.06) !important;
+}
+.nav-inner,
+.nav-logo,
+.nav-logo-text,
+.nav-links,
+.nav-cta {
+  background: transparent !important;
+  background-color: transparent !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+  border: none;
+  box-shadow: none;
 }
 .nav-inner {
   display: flex; align-items: center; justify-content: space-between;
