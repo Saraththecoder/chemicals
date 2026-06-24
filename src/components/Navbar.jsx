@@ -82,7 +82,7 @@ export default function Navbar() {
         </div>
       </nav>
 
-      <div className={`nav-mobile${menuOpen ? ' open' : ''}`} aria-label="Mobile Navigation">
+      <div className={`nav-mobile${menuOpen ? ' open' : ''}${scrolled ? ' scrolled' : ''}`} aria-label="Mobile Navigation">
         {navLinks.map(l => (
           <Link key={l.to} to={l.to}>{l.label}</Link>
         ))}

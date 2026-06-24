@@ -5,48 +5,56 @@ const services = [
   {
     num: '01', id: 'service-heat-exchanger',
     title: 'Descaling of Heat Exchangers',
+    img: '/services/heat-exchanger.png',
     desc: 'Professional chemical descaling services to remove stubborn scale deposits — including calcium carbonate, silica, and biological fouling — from heat exchanger surfaces. Our treatments improve heat transfer efficiency, restore thermal performance, and significantly extend equipment life. We use industry-safe descaling chemicals matched to your specific tube material and scale composition.',
     tags: ['Scale Removal', 'Thermal Efficiency', 'Chemical Descaling'],
   },
   {
     num: '02', id: 'service-shell-tube',
     title: 'Shell & Tube Condenser Cleaning',
+    img: '/services/shell-tube.png',
     desc: 'Efficient chemical and mechanical cleaning services for shell and tube condensers to maximize performance and extend equipment life. We remove fouling, biofilm, and mineral scale from both shell and tube sides, restoring rated heat exchange capacity and preventing unplanned shutdowns.',
     tags: ['Fouling Removal', 'Condenser Cleaning', 'Biofilm Control'],
   },
   {
     num: '03', id: 'service-phe',
     title: 'Plate Heat Exchanger (PHE) Descaling',
+    img: '/services/phe.png',
     desc: 'Chemical cleaning and descaling of Plate Heat Exchanger (PHE) systems for improved thermal efficiency. PHEs are prone to tight-channel fouling that restricts flow and drops efficiency dramatically. Our targeted chemical protocols restore plates to near-original condition without damage.',
     tags: ['PHE Cleaning', 'Flow Restoration', 'Plate Protection'],
   },
   {
     num: '04', id: 'service-surface-condenser',
     title: 'Surface Condenser Services',
+    img: '/services/surface-condenser.png',
     desc: 'Comprehensive removal of scaling, fouling, and biological deposits from surface condensers to fully restore operational efficiency. We assess the type and severity of deposit, design a targeted treatment plan, and execute the cleaning with minimal downtime impact — critical for power plant and process industry applications.',
     tags: ['Power Plants', 'Fouling Removal', 'Minimal Downtime'],
   },
   {
     num: '05', id: 'service-turbine',
     title: 'Turbine Generator Cooler Cleaning',
+    img: '/services/turbine.png',
     desc: 'Specialized cleaning services for turbine generator cooling systems. Our team has experience with hydrogen-cooled and air-cooled systems, using carefully formulated chemical treatments and validated procedures to ensure safe, effective results without disrupting critical power generation equipment.',
     tags: ['Turbine Cooling', 'Specialist Service', 'Power Generation'],
   },
   {
     num: '06', id: 'service-boiler',
     title: 'Boiler Water Treatment',
+    img: '/services/boiler.png',
     desc: 'Comprehensive chemical treatment programs designed to prevent scale formation, corrosion, and carryover in industrial boilers. We provide online and offline descaling, pH management, oxygen scavenging, and complete treatment audits to maintain optimal boiler performance year-round.',
     tags: ['Scale Prevention', 'Corrosion Control', 'pH Management'],
   },
   {
     num: '07', id: 'service-chiller',
     title: 'Chiller Water Treatment',
+    img: '/services/chiller.png',
     desc: 'Customized chemical treatment solutions to improve chiller performance, reduce energy consumption, and minimize maintenance costs. We analyze your chiller water quality, assess corrosion and scale risk, and design a tailored treatment program that keeps your HVAC or process chiller system running at peak efficiency.',
     tags: ['HVAC Chillers', 'Energy Savings', 'Process Cooling'],
   },
   {
     num: '08', id: 'service-evaporative',
     title: 'Evaporative Condenser Services',
+    img: '/services/evaporative.png',
     desc: 'Tailored chemical treatment and maintenance solutions for evaporative condensers, based on coil material composition and water quality analysis. We recommend and supply customized chemical blends to prevent scale, corrosion, and biological growth on coils.',
     tags: ['Coil Protection', 'Biofouling Control', 'Custom Chemicals'],
   },
@@ -102,10 +110,13 @@ export default function Services() {
             <p>From chemical supply to physical cleaning, we maintain your HVAC and process utility systems at peak performance.</p>
           </div>
 
-          <div style={{ display: 'flex', flexDirection: 'column', gap: '20px' }}>
+          <div style={{ display: 'flex', flexDirection: 'column', gap: '32px' }}>
             {services.map((s, i) => (
-              <div className={`row-card reveal reveal-delay-${(i % 3) + 1}`} key={s.id} id={s.id}>
-                <div className="s-num">{s.num}</div>
+              <div className={`row-card service-row-card reveal reveal-delay-${(i % 3) + 1}`} key={s.id} id={s.id}>
+                <div className="service-row-img-wrapper" style={{ position: 'relative' }}>
+                  <img src={s.img} alt={s.title} className="service-row-img" />
+                  <span className="s-num" style={{ position: 'absolute', top: '12px', left: '12px', background: 'rgba(6, 44, 61, 0.85)', color: '#fff', padding: '4px 10px', borderRadius: 'var(--radius-sm)', fontSize: '0.9rem', fontWeight: 'bold', zIndex: 2 }}>{s.num}</span>
+                </div>
                 <div>
                   <h3>{s.title}</h3>
                   <p>{s.desc}</p>

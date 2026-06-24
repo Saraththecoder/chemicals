@@ -2,14 +2,14 @@ import { Link } from 'react-router-dom'
 import { useScrollReveal, useCounter } from '../hooks/useAnimations'
 
 const services = [
-  { icon: <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8"><rect x="2" y="7" width="20" height="10" rx="2"/><line x1="7" y1="7" x2="7" y2="17"/><line x1="12" y1="7" x2="12" y2="17"/><line x1="17" y1="7" x2="17" y2="17"/></svg>, title: 'Heat Exchanger Descaling', desc: 'Professional chemical descaling to remove scale deposits and improve heat transfer efficiency.' },
-  { icon: <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8"><circle cx="12" cy="12" r="9"/><path d="M12 8v4l2 2"/></svg>, title: 'Shell & Tube Condenser Cleaning', desc: 'Efficient cleaning and maintenance to maximize condenser performance and equipment life.' },
-  { icon: <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8"><path d="M2 20h20M4 20V10l8-6 8 6v10"/><rect x="9" y="14" width="6" height="6"/></svg>, title: 'PHE Descaling', desc: 'Chemical cleaning and descaling of Plate Heat Exchanger systems for improved thermal efficiency.' },
-  { icon: <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8"><ellipse cx="12" cy="12" rx="10" ry="6"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 6v12"/></svg>, title: 'Surface Condenser Services', desc: 'Removal of scaling, fouling, and deposits to restore operational efficiency.' },
-  { icon: <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8"><path d="M12 2a10 10 0 1 0 10 10"/><path d="M12 6v6l4 2"/></svg>, title: 'Turbine Generator Cooler', desc: 'Specialized cleaning services for turbine generator cooling systems.' },
-  { icon: <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8"><path d="M12 22C6.48 22 2 17.52 2 12S6.48 2 12 2s10 4.48 10 10"/><path d="M18 14v8M22 18h-8"/></svg>, title: 'Boiler Water Treatment', desc: 'Chemical treatment programs to prevent scale, corrosion, and efficiency losses in boilers.' },
-  { icon: <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8"><path d="M12 2v20M2 12h20"/><circle cx="12" cy="12" r="4"/></svg>, title: 'Chiller Water Treatment', desc: 'Customized treatment solutions to improve chiller performance and reduce maintenance costs.' },
-  { icon: <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8"><path d="M3 15a4 4 0 0 0 4 4h9a5 5 0 0 0 1.8-9.65A6 6 0 0 0 6.4 7.8 4 4 0 0 0 3 15z"/></svg>, title: 'Evaporative Condenser', desc: 'Chemical treatment and maintenance solutions based on coil material and water quality.' },
+  { icon: <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8"><rect x="2" y="7" width="20" height="10" rx="2"/><line x1="7" y1="7" x2="7" y2="17"/><line x1="12" y1="7" x2="12" y2="17"/><line x1="17" y1="7" x2="17" y2="17"/></svg>, title: 'Heat Exchanger Descaling', img: '/services/heat-exchanger.png', desc: 'Professional chemical descaling to remove scale deposits and improve heat transfer efficiency.' },
+  { icon: <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8"><circle cx="12" cy="12" r="9"/><path d="M12 8v4l2 2"/></svg>, title: 'Shell & Tube Condenser Cleaning', img: '/services/shell-tube.png', desc: 'Efficient cleaning and maintenance to maximize condenser performance and equipment life.' },
+  { icon: <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8"><path d="M2 20h20M4 20V10l8-6 8 6v10"/><rect x="9" y="14" width="6" height="6"/></svg>, title: 'PHE Descaling', img: '/services/phe.png', desc: 'Chemical cleaning and descaling of Plate Heat Exchanger systems for improved thermal efficiency.' },
+  { icon: <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8"><ellipse cx="12" cy="12" rx="10" ry="6"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 6v12"/></svg>, title: 'Surface Condenser Services', img: '/services/surface-condenser.png', desc: 'Removal of scaling, fouling, and deposits to restore operational efficiency.' },
+  { icon: <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8"><path d="M12 2a10 10 0 1 0 10 10"/><path d="M12 6v6l4 2"/></svg>, title: 'Turbine Generator Cooler', img: '/services/turbine.png', desc: 'Specialized cleaning services for turbine generator cooling systems.' },
+  { icon: <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8"><path d="M12 22C6.48 22 2 17.52 2 12S6.48 2 12 2s10 4.48 10 10"/><path d="M18 14v8M22 18h-8"/></svg>, title: 'Boiler Water Treatment', img: '/services/boiler.png', desc: 'Chemical treatment programs to prevent scale, corrosion, and efficiency losses in boilers.' },
+  { icon: <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8"><path d="M12 2v20M2 12h20"/><circle cx="12" cy="12" r="4"/></svg>, title: 'Chiller Water Treatment', img: '/services/chiller.png', desc: 'Customized treatment solutions to improve chiller performance and reduce maintenance costs.' },
+  { icon: <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8"><path d="M3 15a4 4 0 0 0 4 4h9a5 5 0 0 0 1.8-9.65A6 6 0 0 0 6.4 7.8 4 4 0 0 0 3 15z"/></svg>, title: 'Evaporative Condenser', img: '/services/evaporative.png', desc: 'Chemical treatment and maintenance solutions based on coil material and water quality.' },
 ]
 
 const features = [
@@ -125,10 +125,15 @@ export default function Home() {
           </div>
           <div className="grid-4">
             {services.map((s, i) => (
-              <div className={`card reveal reveal-delay-${(i % 4) + 1}`} key={s.title}>
-                <div className="card-icon">{s.icon}</div>
-                <h3>{s.title}</h3>
-                <p>{s.desc}</p>
+              <div className={`card service-card reveal reveal-delay-${(i % 4) + 1}`} key={s.title}>
+                <div className="service-card-img-wrapper">
+                  <img src={s.img} alt={s.title} className="service-card-img" />
+                  <div className="service-card-icon-floating">{s.icon}</div>
+                </div>
+                <div className="service-card-body">
+                  <h3>{s.title}</h3>
+                  <p>{s.desc}</p>
+                </div>
               </div>
             ))}
           </div>
