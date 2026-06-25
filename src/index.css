@@ -185,21 +185,21 @@ p  { color: var(--grey-700); line-height: 1.75; }
 }
 
 .splash-logo {
-  width: 260px; /* Significantly larger logo for the splash screen on desktop */
-  max-width: 80vw;
+  width: 360px; /* Enlarged logo for splash screen */
+  max-width: 85vw;
   height: auto;
-  filter: drop-shadow(0 0 35px rgba(26, 143, 196, 0.5));
+  filter: drop-shadow(0 0 40px rgba(26, 143, 196, 0.55));
   animation: logoPulse 2.5s ease-in-out infinite alternate;
 }
 
 .splash-brand {
-  margin-top: 24px;
+  margin-top: 20px;
   text-align: center;
 }
 
 .splash-brand-title {
   font-family: var(--font-head);
-  font-size: 2.2rem;
+  font-size: 1.5rem; /* Decreased text size */
   font-weight: 800;
   color: var(--white);
   letter-spacing: 0.02em;
@@ -208,36 +208,36 @@ p  { color: var(--grey-700); line-height: 1.75; }
 
 .splash-brand-subtitle {
   font-family: var(--font-head);
-  font-size: 1.2rem;
+  font-size: 0.85rem; /* Decreased text size */
   font-weight: 600;
   color: var(--copper-300);
   text-transform: uppercase;
   letter-spacing: 0.15em;
-  margin-top: 8px;
+  margin-top: 6px;
 }
 
 /* Responsive adjustments for splash screen elements */
 @media (max-width: 768px) {
   .splash-logo {
-    width: 200px;
+    width: 260px;
   }
   .splash-brand-title {
-    font-size: 1.8rem;
+    font-size: 1.3rem;
   }
   .splash-brand-subtitle {
-    font-size: 1rem;
+    font-size: 0.8rem;
   }
 }
 
 @media (max-width: 480px) {
   .splash-logo {
-    width: 150px;
+    width: 190px;
   }
   .splash-brand-title {
-    font-size: 1.5rem;
+    font-size: 1.15rem;
   }
   .splash-brand-subtitle {
-    font-size: 0.9rem;
+    font-size: 0.75rem;
   }
 }
 

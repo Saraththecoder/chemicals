@@ -1372,11 +1372,20 @@
     width: 100%;
   }
   
-  .tile-group {
+  .tile-group, .tile-group.two-col-tiles {
     grid-template-columns: 1fr;
   }
   
   .faq-grid {
     grid-template-columns: 1fr;
+  }
+
+  /* Responsive Cost Estimator */
+  .metrics-row {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+  .estimator-card, .price-result-card {
+    padding: 24px 16px;
   }
 }
