@@ -65,7 +65,7 @@ export default function Footer() {
         </div>
 
         <div className="footer-bottom">
-          <p>© 2025 Sri Viranjaneya (SV) Industrial Watertech &amp; Services. All Rights Reserved.</p>
+          <p>© 2026 Sri Viranjaneya Industrial Watertech &amp; Services. All Rights Reserved.</p>
           <div className="footer-bottom-links">
             <Link to="/contact">Get Quote</Link>
             <Link to="/estimate">Cost Estimator</Link>
