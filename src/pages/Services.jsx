@@ -40,7 +40,7 @@ const services = [
   {
     num: '06', id: 'service-heat-exchanger',
     title: 'Descaling of Heat Exchangers',
-    img: '/heat.png',
+    img: '/services/heat-exchanger.png',
     desc: 'Professional chemical descaling services to remove stubborn scale deposits — including calcium carbonate, silica, and biological fouling — from heat exchanger surfaces. Our treatments improve heat transfer efficiency, restore thermal performance, and significantly extend equipment life. We use industry-safe descaling chemicals matched to your specific tube material and scale composition.',
     tags: ['Scale Removal', 'Thermal Efficiency', 'Chemical Descaling'],
   },
