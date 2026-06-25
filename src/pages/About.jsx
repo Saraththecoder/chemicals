@@ -53,17 +53,7 @@ export default function About() {
               </div>
             </div>
             <div className="reveal reveal-delay-2">
-              <div style={{
-                position: 'relative',
-                backgroundImage: "url('/about-industrial.png')",
-                backgroundSize: 'cover',
-                backgroundPosition: 'center',
-                borderRadius: 'var(--radius-xl)',
-                padding: '48px 36px',
-                color: '#fff',
-                textAlign: 'center',
-                overflow: 'hidden'
-              }}>
+              <div className="about-stats-card" style={{ backgroundImage: "url('/about-industrial.png')" }}>
                 <div style={{
                   position: 'absolute',
                   inset: 0,
@@ -74,9 +64,9 @@ export default function About() {
                   <p style={{ color: 'rgba(255,255,255,.85)', marginBottom: '40px', fontStyle: 'italic', fontSize: '1.05rem' }}>
                     "Delivering quality chemicals and reliable services that improve equipment performance and customer productivity."
                   </p>
-                  <div className="grid-2" style={{ gap: '24px' }}>
+                  <div className="about-stats-grid">
                     {stats.map(s => (
-                      <div className="stat-block" key={s.label} style={{ background: 'rgba(255,255,255,.06)' }}>
+                      <div className="stat-block" key={s.label} style={{ background: 'rgba(255,255,255,.06)', padding: '24px 16px' }}>
                         <span className="stat-num" data-count={s.count} data-suffix={s.suffix}>{s.count}{s.suffix}</span>
                         <span className="stat-label">{s.label}</span>
                       </div>

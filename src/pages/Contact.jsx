@@ -3,14 +3,14 @@ import { Link } from 'react-router-dom'
 import { useScrollReveal } from '../hooks/useAnimations'
 
 const services = [
+  'Boiler Water Treatment',
+  'Chiller Water Treatment',
+  'Evaporative Condenser Services',
   'Heat Exchanger Descaling',
   'Shell & Tube Condenser Cleaning',
   'PHE Descaling',
   'Surface Condenser Services',
   'Turbine Generator Cooler Cleaning',
-  'Boiler Water Treatment',
-  'Chiller Water Treatment',
-  'Evaporative Condenser Services',
   'General Inquiry',
 ]
 

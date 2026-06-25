@@ -3,54 +3,6 @@ import { Link, useLocation } from 'react-router-dom'
 import { useScrollReveal } from '../hooks/useAnimations'
 
 const systemConfigs = {
-  'service-heat-exchanger': {
-    id: 'service-heat-exchanger',
-    title: 'Heat Exchanger Descaling',
-    min: 50, max: 500, step: 10, defaultVal: 150,
-    unit: 'TR (Tonnage)',
-    calcPrice: (cap) => cap * 45 + 8500,
-    calcChemical: (cap) => Math.round(cap * 0.22 + 12),
-    calcHours: (cap) => Math.ceil(cap * 0.01 + 4),
-    calcTechs: (cap) => (cap > 250 ? 3 : 2),
-    inclusions: [
-      'Customized Descaling Acid Blend',
-      'Base metal corrosion inhibitors',
-      'pH neutralization & cleaning kits',
-      'Post-service water chemistry test'
-    ]
-  },
-  'service-shell-tube': {
-    id: 'service-shell-tube',
-    title: 'Shell & Tube Condenser Cleaning',
-    min: 100, max: 1000, step: 50, defaultVal: 400,
-    unit: 'Tubes',
-    calcPrice: (cap) => cap * 28 + 8000,
-    calcChemical: (cap) => Math.round(cap * 0.09 + 15),
-    calcHours: (cap) => Math.ceil(cap * 0.005 + 4),
-    calcTechs: (cap) => (cap > 500 ? 3 : 2),
-    inclusions: [
-      'Eco-safe condenser cleaning chemicals',
-      'Scale softener compound',
-      'Neutralizing agent',
-      'Tube cleaning brush set (Supply mode)'
-    ]
-  },
-  'service-phe': {
-    id: 'service-phe',
-    title: 'Plate Heat Exchanger (PHE) Descaling',
-    min: 20, max: 200, step: 5, defaultVal: 60,
-    unit: 'Plates',
-    calcPrice: (cap) => cap * 110 + 6500,
-    calcChemical: (cap) => Math.round(cap * 0.35 + 10),
-    calcHours: (cap) => Math.ceil(cap * 0.02 + 3),
-    calcTechs: (cap) => (cap > 100 ? 3 : 2),
-    inclusions: [
-      'Plate-safe organic acid descalers',
-      'Gasket conditioning solution',
-      'Alkaline passivating blend',
-      'Corrosion monitoring strips'
-    ]
-  },
   'service-boiler': {
     id: 'service-boiler',
     title: 'Boiler Water Treatment',
@@ -98,6 +50,54 @@ const systemConfigs = {
       'Coil cleaning chemical wash',
       'System flushing chemicals'
     ]
+  },
+  'service-heat-exchanger': {
+    id: 'service-heat-exchanger',
+    title: 'Heat Exchanger Descaling',
+    min: 50, max: 500, step: 10, defaultVal: 150,
+    unit: 'TR (Tonnage)',
+    calcPrice: (cap) => cap * 45 + 8500,
+    calcChemical: (cap) => Math.round(cap * 0.22 + 12),
+    calcHours: (cap) => Math.ceil(cap * 0.01 + 4),
+    calcTechs: (cap) => (cap > 250 ? 3 : 2),
+    inclusions: [
+      'Customized Descaling Acid Blend',
+      'Base metal corrosion inhibitors',
+      'pH neutralization & cleaning kits',
+      'Post-service water chemistry test'
+    ]
+  },
+  'service-shell-tube': {
+    id: 'service-shell-tube',
+    title: 'Shell & Tube Condenser Cleaning',
+    min: 100, max: 1000, step: 50, defaultVal: 400,
+    unit: 'Tubes',
+    calcPrice: (cap) => cap * 28 + 8000,
+    calcChemical: (cap) => Math.round(cap * 0.09 + 15),
+    calcHours: (cap) => Math.ceil(cap * 0.005 + 4),
+    calcTechs: (cap) => (cap > 500 ? 3 : 2),
+    inclusions: [
+      'Eco-safe condenser cleaning chemicals',
+      'Scale softener compound',
+      'Neutralizing agent',
+      'Tube cleaning brush set (Supply mode)'
+    ]
+  },
+  'service-phe': {
+    id: 'service-phe',
+    title: 'Plate Heat Exchanger (PHE) Descaling',
+    min: 20, max: 200, step: 5, defaultVal: 60,
+    unit: 'Plates',
+    calcPrice: (cap) => cap * 110 + 6500,
+    calcChemical: (cap) => Math.round(cap * 0.35 + 10),
+    calcHours: (cap) => Math.ceil(cap * 0.02 + 3),
+    calcTechs: (cap) => (cap > 100 ? 3 : 2),
+    inclusions: [
+      'Plate-safe organic acid descalers',
+      'Gasket conditioning solution',
+      'Alkaline passivating blend',
+      'Corrosion monitoring strips'
+    ]
   }
 }
 
@@ -112,7 +112,7 @@ export default function Estimate() {
     if (serviceParam && systemConfigs[serviceParam]) {
       return serviceParam
     }
-    return 'service-heat-exchanger'
+    return 'service-boiler'
   }
 
   const [systemKey, setSystemKey] = useState(getInitialSystem())

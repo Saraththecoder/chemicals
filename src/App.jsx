@@ -1,5 +1,5 @@
 import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom'
-import { useEffect } from 'react'
+import { useEffect, useState } from 'react'
 import './styles/components.css'
 import Navbar from './components/Navbar'
 import Footer from './components/Footer'
@@ -11,6 +11,45 @@ import Chemicals from './pages/Chemicals'
 import Industries from './pages/Industries'
 import Contact from './pages/Contact'
 import Estimate from './pages/Estimate'
+
+function SplashScreen() {
+  const [visible, setVisible] = useState(true)
+  const [fadeOut, setFadeOut] = useState(false)
+
+  useEffect(() => {
+    // start fade out after 1.8s
+    const fadeTimer = setTimeout(() => {
+      setFadeOut(true)
+    }, 1800)
+
+    // completely hide/remove component after transition (2.4s)
+    const removeTimer = setTimeout(() => {
+      setVisible(false)
+    }, 2400)
+
+    return () => {
+      clearTimeout(fadeTimer)
+      clearTimeout(removeTimer)
+    }
+  }, [])
+
+  if (!visible) return null
+
+  return (
+    <div className={`splash-screen${fadeOut ? ' fade-out' : ''}`} aria-hidden="true">
+      <div className="splash-logo-container">
+        <img src="/logo.png" alt="SV Industrial Watertech Logo" className="splash-logo" />
+        <div className="splash-brand">
+          <div className="splash-brand-title">SV Industrial Watertech</div>
+          <div className="splash-brand-subtitle">&amp; Services</div>
+        </div>
+      </div>
+      <div className="splash-loader">
+        <div className="splash-loader-bar"></div>
+      </div>
+    </div>
+  )
+}
 
 function ScrollToTop() {
   const { pathname } = useLocation()
@@ -32,20 +71,23 @@ function ScrollToTop() {
 
 export default function App() {
   return (
-    <BrowserRouter>
-      <ScrollToTop />
-      <Navbar />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/services" element={<Services />} />
-        <Route path="/chemicals" element={<Chemicals />} />
-        <Route path="/industries" element={<Industries />} />
-        <Route path="/contact" element={<Contact />} />
-        <Route path="/estimate" element={<Estimate />} />
-      </Routes>
-      <Footer />
-      <FloatingCTAs />
-    </BrowserRouter>
+    <>
+      <SplashScreen />
+      <BrowserRouter>
+        <ScrollToTop />
+        <Navbar />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/services" element={<Services />} />
+          <Route path="/chemicals" element={<Chemicals />} />
+          <Route path="/industries" element={<Industries />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/estimate" element={<Estimate />} />
+        </Routes>
+        <Footer />
+        <FloatingCTAs />
+      </BrowserRouter>
+    </>
   )
 }
