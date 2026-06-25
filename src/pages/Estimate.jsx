@@ -19,6 +19,38 @@ const systemConfigs = {
       'Hardness test reagents'
     ]
   },
+  'service-cooling': {
+    id: 'service-cooling',
+    title: 'Cooling Tower Chemicals',
+    min: 100, max: 1000, step: 50, defaultVal: 300,
+    unit: 'TR (Cooling Capacity)',
+    calcPrice: (cap) => cap * 22 + 9000,
+    calcChemical: (cap) => Math.round(cap * 0.14 + 20),
+    calcHours: (cap) => Math.ceil(cap * 0.006 + 4),
+    calcTechs: (cap) => (cap > 500 ? 3 : 2),
+    inclusions: [
+      'Anti-scalant & silica inhibitor blend',
+      'Algae & biological control biocides',
+      'Corrosion coupon monitoring setup',
+      'Water quality analysis kit'
+    ]
+  },
+  'service-ro': {
+    id: 'service-ro',
+    title: 'RO Chemicals',
+    min: 1, max: 10, step: 1, defaultVal: 3,
+    unit: 'm³/hr (Feed Flow)',
+    calcPrice: (cap) => cap * 3200 + 11000,
+    calcChemical: (cap) => Math.round(cap * 20 + 40),
+    calcHours: (cap) => Math.ceil(cap * 0.4 + 4),
+    calcTechs: (cap) => (cap > 5 ? 3 : 2),
+    inclusions: [
+      'RO membrane anti-scalant compound',
+      'Membrane cleaning acid wash',
+      'pH adjusting dosing chemical',
+      'Silt Density Index (SDI) test kit'
+    ]
+  },
   'service-chiller': {
     id: 'service-chiller',
     title: 'Chiller Water Treatment',
@@ -37,7 +69,7 @@ const systemConfigs = {
   },
   'service-evaporative': {
     id: 'service-evaporative',
-    title: 'Evaporative Condenser Services',
+    title: 'Evaporative Condenser Chemicals & Descaling',
     min: 50, max: 500, step: 10, defaultVal: 150,
     unit: 'TR (Capacity)',
     calcPrice: (cap) => cap * 38 + 7500,
@@ -69,7 +101,7 @@ const systemConfigs = {
   },
   'service-shell-tube': {
     id: 'service-shell-tube',
-    title: 'Shell & Tube Condenser Cleaning',
+    title: 'Shell & Tube Condensers Descaling',
     min: 100, max: 1000, step: 50, defaultVal: 400,
     unit: 'Tubes',
     calcPrice: (cap) => cap * 28 + 8000,

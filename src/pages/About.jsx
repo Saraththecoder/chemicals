@@ -12,7 +12,7 @@ const values = [
 
 const stats = [
   { count: 21, suffix: '+', label: 'Years Experience' },
-  { count: 8, suffix: '+', label: 'Core Services' },
+  { count: 10, suffix: '+', label: 'Core Services' },
   { count: 6, suffix: '+', label: 'Industries' },
   { count: 500, suffix: '+', label: 'Projects Done' },
 ]

@@ -36,7 +36,7 @@ export default function Footer() {
           <div className="footer-col">
             <h4>Our Services</h4>
             <ul>
-              {['Boiler Water Treatment', 'Chiller Treatment', 'Evaporative Condenser', 'Heat Exchanger Descaling', 'Shell & Tube Condenser', 'PHE Descaling'].map(s => (
+              {['Boiler Water Treatment', 'Cooling Tower Chemicals', 'RO Chemicals', 'Chiller Treatment', 'Evaporative Condenser Chemicals & Descaling', 'Heat Exchanger Descaling', 'Shell & Tube Condensers Descaling', 'PHE Descaling'].map(s => (
                 <li key={s}><Link to="/services">{s}</Link></li>
               ))}
             </ul>

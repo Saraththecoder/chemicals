@@ -4,10 +4,12 @@ import { useScrollReveal } from '../hooks/useAnimations'
 
 const services = [
   'Boiler Water Treatment',
+  'Cooling Tower Chemicals',
+  'RO Chemicals',
   'Chiller Water Treatment',
-  'Evaporative Condenser Services',
+  'Evaporative Condenser Chemicals & Descaling',
   'Heat Exchanger Descaling',
-  'Shell & Tube Condenser Cleaning',
+  'Shell & Tube Condensers Descaling',
   'PHE Descaling',
   'Surface Condenser Services',
   'Turbine Generator Cooler Cleaning',

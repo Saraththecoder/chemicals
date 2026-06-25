@@ -10,49 +10,63 @@ const services = [
     tags: ['Scale Prevention', 'Corrosion Control', 'pH Management'],
   },
   {
-    num: '02', id: 'service-chiller',
+    num: '02', id: 'service-cooling',
+    title: 'Cooling Tower Chemicals',
+    img: '/services/cooling.png',
+    desc: 'High-performance cooling tower chemical programs to control mineral scaling, metallic corrosion, and biological fouling. We source and supply customized formulations that maintain heat rejection efficiency and extend equipment lifespan.',
+    tags: ['Scale Control', 'Biocide Programs', 'Corrosion Inhibitors'],
+  },
+  {
+    num: '03', id: 'service-ro',
+    title: 'RO Chemicals',
+    img: '/services/ro.png',
+    desc: 'Specialized reverse osmosis water treatment chemicals, including high-efficiency antiscalants, membrane cleaning acids, and biocides. Our products prevent biofouling and scale deposition, maintaining permeate flow and quality.',
+    tags: ['RO Antiscalants', 'Membrane Cleaners', 'Biofouling Control'],
+  },
+  {
+    num: '04', id: 'service-chiller',
     title: 'Chiller Water Treatment',
     img: '/services/chiller.png',
     desc: 'Customized chemical treatment solutions to improve chiller performance, reduce energy consumption, and minimize maintenance costs. We analyze your chiller water quality, assess corrosion and scale risk, and design a tailored treatment program that keeps your HVAC or process chiller system running at peak efficiency.',
     tags: ['HVAC Chillers', 'Energy Savings', 'Process Cooling'],
   },
   {
-    num: '03', id: 'service-evaporative',
-    title: 'Evaporative Condenser Services',
+    num: '05', id: 'service-evaporative',
+    title: 'Evaporative Condenser Chemicals & Descaling',
     img: '/services/evaporative.png',
     desc: 'Tailored chemical treatment and maintenance solutions for evaporative condensers, based on coil material composition and water quality analysis. We recommend and supply customized chemical blends to prevent scale, corrosion, and biological growth on coils.',
     tags: ['Coil Protection', 'Biofouling Control', 'Custom Chemicals'],
   },
   {
-    num: '04', id: 'service-heat-exchanger',
+    num: '06', id: 'service-heat-exchanger',
     title: 'Descaling of Heat Exchangers',
     img: '/services/heat.png',
     desc: 'Professional chemical descaling services to remove stubborn scale deposits — including calcium carbonate, silica, and biological fouling — from heat exchanger surfaces. Our treatments improve heat transfer efficiency, restore thermal performance, and significantly extend equipment life. We use industry-safe descaling chemicals matched to your specific tube material and scale composition.',
     tags: ['Scale Removal', 'Thermal Efficiency', 'Chemical Descaling'],
   },
   {
-    num: '05', id: 'service-shell-tube',
-    title: 'Shell & Tube Condenser Cleaning',
+    num: '07', id: 'service-shell-tube',
+    title: 'Shell & Tube Condensers Descaling',
     img: '/services/shell-tube.png',
     desc: 'Efficient chemical and mechanical cleaning services for shell and tube condensers to maximize performance and extend equipment life. We remove fouling, biofilm, and mineral scale from both shell and tube sides, restoring rated heat exchange capacity and preventing unplanned shutdowns.',
     tags: ['Fouling Removal', 'Condenser Cleaning', 'Biofilm Control'],
   },
   {
-    num: '06', id: 'service-phe',
+    num: '08', id: 'service-phe',
     title: 'Plate Heat Exchanger (PHE) Descaling',
     img: '/services/phe.png',
     desc: 'Chemical cleaning and descaling of Plate Heat Exchanger (PHE) systems for improved thermal efficiency. PHEs are prone to tight-channel fouling that restricts flow and drops efficiency dramatically. Our targeted chemical protocols restore plates to near-original condition without damage.',
     tags: ['PHE Cleaning', 'Flow Restoration', 'Plate Protection'],
   },
   {
-    num: '07', id: 'service-surface-condenser',
+    num: '09', id: 'service-surface-condenser',
     title: 'Surface Condenser Services',
     img: '/services/surface-condenser.png',
     desc: 'Comprehensive removal of scaling, fouling, and biological deposits from surface condensers to fully restore operational efficiency. We assess the type and severity of deposit, design a targeted treatment plan, and execute the cleaning with minimal downtime impact — critical for power plant and process industry applications.',
     tags: ['Power Plants', 'Fouling Removal', 'Minimal Downtime'],
   },
   {
-    num: '08', id: 'service-turbine',
+    num: '10', id: 'service-turbine',
     title: 'Turbine Generator Cooler Cleaning',
     img: '/services/turbine.png',
     desc: 'Specialized cleaning services for turbine generator cooling systems. Our team has experience with hydrogen-cooled and air-cooled systems, using carefully formulated chemical treatments and validated procedures to ensure safe, effective results without disrupting critical power generation equipment.',
@@ -106,7 +120,7 @@ export default function Services() {
         <div className="container">
           <div className="section-header reveal">
             <span className="eyebrow">Our Core Solutions</span>
-            <h2>8 Water Treatment Services</h2>
+            <h2>10 Water Treatment Services</h2>
             <p>From chemical supply to physical cleaning, we maintain your HVAC and process utility systems at peak performance.</p>
           </div>
 
