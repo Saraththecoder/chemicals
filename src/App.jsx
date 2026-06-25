@@ -11,6 +11,7 @@ import Chemicals from './pages/Chemicals'
 import Industries from './pages/Industries'
 import Contact from './pages/Contact'
 import Estimate from './pages/Estimate'
+import { SEO_TITLES, SEO_DESCRIPTIONS, SEO_KEYWORDS, SEO_SCHEMAS } from './utils/seo'
 
 function SplashScreen() {
   const [visible, setVisible] = useState(true)
@@ -55,16 +56,50 @@ function ScrollToTop() {
   const { pathname } = useLocation()
   useEffect(() => {
     window.scrollTo(0, 0)
-    const titles = {
-      '/': 'SV Industrial Watertech & Services | Water Treatment & Descaling Hyderabad',
-      '/about': 'About Us | SV Industrial Watertech & Services',
-      '/services': 'Industrial Water Treatment Services | SV Industrial Watertech',
-      '/chemicals': 'Water Treatment Chemicals Portfolio | SV Industrial Watertech',
-      '/industries': 'Industries Served | SV Industrial Watertech & Services',
-      '/contact': 'Request a Quote & Contact | SV Industrial Watertech',
-      '/estimate': 'Instant Service Price Estimate | SV Industrial Watertech',
+    
+    // Set title
+    document.title = SEO_TITLES[pathname] || 'SV Industrial Watertech & Services'
+
+    // Set meta description
+    const desc = SEO_DESCRIPTIONS[pathname] || SEO_DESCRIPTIONS['/']
+    let metaDesc = document.querySelector('meta[name="description"]')
+    if (!metaDesc) {
+      metaDesc = document.createElement('meta')
+      metaDesc.name = 'description'
+      document.head.appendChild(metaDesc)
     }
-    document.title = titles[pathname] || 'SV Industrial Watertech & Services'
+    metaDesc.content = desc
+
+    // Set meta keywords
+    const keywords = SEO_KEYWORDS[pathname] || SEO_KEYWORDS['/']
+    let metaKeywords = document.querySelector('meta[name="keywords"]')
+    if (!metaKeywords) {
+      metaKeywords = document.createElement('meta')
+      metaKeywords.name = 'keywords'
+      document.head.appendChild(metaKeywords)
+    }
+    metaKeywords.content = keywords
+
+    // Set canonical link
+    let canonical = document.querySelector('link[rel="canonical"]')
+    if (!canonical) {
+      canonical = document.createElement('link')
+      canonical.rel = 'canonical'
+      document.head.appendChild(canonical)
+    }
+    canonical.href = `https://svindustrialwatertech.com${pathname === '/' ? '' : pathname}`
+
+    // Set JSON-LD Schema structured data
+    const existingSchemas = document.querySelectorAll('script[type="application/ld+json"]')
+    existingSchemas.forEach(el => el.remove())
+
+    const schema = SEO_SCHEMAS[pathname] || SEO_SCHEMAS['/']
+    if (schema) {
+      const script = document.createElement('script')
+      script.type = 'application/ld+json'
+      script.text = JSON.stringify(schema)
+      document.head.appendChild(script)
+    }
   }, [pathname])
   return null
 }
