@@ -100,9 +100,7 @@ export default function Contact() {
                   <div className="contact-detail-icon"><Phone /></div>
                   <div className="contact-detail-body">
                     <h4>Call Us</h4>
-                    <p><a href="tel:+918247292504">82472 92504</a></p>
-                    <p><a href="tel:+917799133905">77991 33905</a></p>
-                    <p><a href="tel:+917799053359">77990 53359</a></p>
+                    <p><a href="tel:+919390477702">93904 77702</a></p>
                   </div>
                 </div>
 
@@ -110,8 +108,7 @@ export default function Contact() {
                   <div className="contact-detail-icon"><WaIcon /></div>
                   <div className="contact-detail-body">
                     <h4>WhatsApp</h4>
-                    <p><a href="https://wa.me/918247292504">82472 92504</a></p>
-                    <p><a href="https://wa.me/917799133905">77991 33905</a></p>
+                    <p><a href="https://wa.me/919390477702">93904 77702</a></p>
                   </div>
                 </div>
 
@@ -126,10 +123,10 @@ export default function Contact() {
                 <div style={{ marginTop: '32px', paddingTop: '24px', borderTop: '1px solid rgba(255,255,255,.15)' }}>
                   <p style={{ fontSize: '.82rem', color: 'rgba(255,255,255,.55)', marginBottom: '12px' }}>Quick Contact</p>
                   <div style={{ display: 'flex', gap: '10px' }}>
-                    <a href="tel:+918247292504" className="btn btn-copper" style={{ flex: 1, justifyContent: 'center', fontSize: '.85rem' }} id="contactCallBtn">
+                    <a href="tel:+919390477702" className="btn btn-copper" style={{ flex: 1, justifyContent: 'center', fontSize: '.85rem' }} id="contactCallBtn">
                       <Phone /> Call Now
                     </a>
-                    <a href="https://wa.me/918247292504?text=Hello%2C%20I%20need%20a%20quote." className="btn btn-whatsapp" style={{ flex: 1, justifyContent: 'center', fontSize: '.85rem' }} id="contactWaBtn">
+                    <a href="https://wa.me/919390477702?text=Hello%2C%20I%20need%20a%20quote." className="btn btn-whatsapp" style={{ flex: 1, justifyContent: 'center', fontSize: '.85rem' }} id="contactWaBtn">
                       <WaIcon /> WhatsApp
                     </a>
                   </div>
@@ -220,8 +217,8 @@ export default function Contact() {
           </div>
           <div className="grid-3" style={{ gap: '20px' }}>
             {[
-              { title: 'Call Us Directly', desc: 'Speak with our experts immediately for urgent inquiries or to schedule a site visit.', cta: 'Call Now', href: 'tel:+918247292504', btnClass: 'btn-primary', icon: <Phone /> },
-              { title: 'WhatsApp Chat', desc: 'Send us a message on WhatsApp for quick responses, photos of your equipment, or to share technical details.', cta: 'WhatsApp Us', href: 'https://wa.me/918247292504?text=Hello%2C%20I%20need%20water%20treatment%20services.', btnClass: 'btn-whatsapp', icon: <WaIcon /> },
+              { title: 'Call Us Directly', desc: 'Speak with our experts immediately for urgent inquiries or to schedule a site visit.', cta: 'Call Now', href: 'tel:+919390477702', btnClass: 'btn-primary', icon: <Phone /> },
+              { title: 'WhatsApp Chat', desc: 'Send us a message on WhatsApp for quick responses, photos of your equipment, or to share technical details.', cta: 'WhatsApp Us', href: 'https://wa.me/919390477702?text=Hello%2C%20I%20need%20water%20treatment%20services.', btnClass: 'btn-whatsapp', icon: <WaIcon /> },
               { title: 'Email Us', desc: 'Send detailed specifications, equipment details, or formal inquiries to our email for a comprehensive proposal.', cta: 'Send Email', href: 'mailto:svindustrialwatertech@gmail.com', btnClass: 'btn-copper', icon: <Mail /> },
             ].map((opt, i) => (
               <div key={opt.title} className={`card reveal reveal-delay-${i + 1}`} style={{ textAlign: 'center' }}>

@@ -128,7 +128,7 @@ export default function Chemicals() {
                 <h3>Need Custom Chemical Solutions?</h3>
                 <p style={{ marginBottom: '24px' }}>Every facility has unique water chemistry and equipment specifications. Our technical team will analyze your requirements and recommend the most effective treatment program for your specific needs.</p>
                 <div style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
-                  <a href="https://wa.me/918247292504?text=Hello%2C%20I%20need%20chemical%20solutions%20for%20my%20facility." className="btn btn-whatsapp" id={`chemWa-${active}`} style={{ justifyContent: 'center' }}>
+                  <a href="https://wa.me/919390477702?text=Hello%2C%20I%20need%20chemical%20solutions%20for%20my%20facility." className="btn btn-whatsapp" id={`chemWa-${active}`} style={{ justifyContent: 'center' }}>
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
                     WhatsApp for Custom Quote
                   </a>
@@ -176,9 +176,9 @@ export default function Chemicals() {
             <h2>Get the Right Chemicals for Your Facility</h2>
             <p>Talk to our water treatment experts for a customized chemical program recommendation.</p>
             <div className="cta-btns">
-              <a href="tel:+918247292504" className="btn btn-copper" id="chemCtaCall">
+              <a href="tel:+919390477702" className="btn btn-copper" id="chemCtaCall">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.37 2 2 0 0 1 3.6 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.63A16 16 0 0 0 15.37 16.09l.95-.95a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-                Call: 82472 92504
+                Call: 93904 77702
               </a>
               <Link to="/contact" className="btn btn-outline" id="chemCtaContact">Request a Quote</Link>
             </div>

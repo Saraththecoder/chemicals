@@ -54,7 +54,7 @@ export default function Navbar() {
 
           <div className="nav-cta">
             <a
-              href="https://wa.me/918247292504?text=Hello%2C%20I%20am%20interested%20in%20your%20water%20treatment%20services."
+              href="https://wa.me/919390477702?text=Hello%2C%20I%20am%20interested%20in%20your%20water%20treatment%20services."
               className="btn btn-whatsapp-outline" id="navWhatsapp"
             >
               <WaIcon /> WhatsApp
@@ -81,10 +81,10 @@ export default function Navbar() {
           <Link key={l.to} to={l.to}>{l.label}</Link>
         ))}
         <div className="mobile-cta">
-          <a href="tel:+918247292504" className="btn btn-primary" style={{ flex: 1, justifyContent: 'center' }} id="mobileCall">
+          <a href="tel:+919390477702" className="btn btn-primary" style={{ flex: 1, justifyContent: 'center' }} id="mobileCall">
             <PhoneIcon /> Call Now
           </a>
-          <a href="https://wa.me/918247292504" className="btn btn-whatsapp" style={{ flex: 1, justifyContent: 'center' }} id="mobileWa">
+          <a href="https://wa.me/919390477702" className="btn btn-whatsapp" style={{ flex: 1, justifyContent: 'center' }} id="mobileWa">
             <WaIcon /> WhatsApp
           </a>
         </div>

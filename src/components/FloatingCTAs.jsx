@@ -13,7 +13,7 @@ export default function FloatingCTAs() {
   return (
     <div className="fab-group" aria-label="Quick Contact">
       <a
-        href="https://wa.me/918247292504?text=Hello%2C%20I%20need%20water%20treatment%20services."
+        href="https://wa.me/919390477702?text=Hello%2C%20I%20need%20water%20treatment%20services."
         className="fab fab-wa"
         id="fabWa"
         aria-label="WhatsApp Chat"
@@ -23,7 +23,7 @@ export default function FloatingCTAs() {
         <span className="fab-tooltip">WhatsApp Us</span>
       </a>
       <a
-        href="tel:+918247292504"
+        href="tel:+919390477702"
         className="fab fab-call"
         id="fabCall"
         aria-label="Call Now"
