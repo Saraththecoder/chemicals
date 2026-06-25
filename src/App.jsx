@@ -40,7 +40,7 @@ function SplashScreen() {
       <div className="splash-logo-container">
         <img src="/logo.png" alt="SV Industrial Watertech Logo" className="splash-logo" />
         <div className="splash-brand">
-          <div className="splash-brand-title">SV Industrial Watertech</div>
+          <div className="splash-brand-title">Sri Viranjaneya Industrial Watertech</div>
           <div className="splash-brand-subtitle">&amp; Services</div>
         </div>
       </div>

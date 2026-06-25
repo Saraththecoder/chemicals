@@ -15,7 +15,7 @@ export default function Footer() {
             <div className="footer-logo">
               <img src="/logo.png" alt="SV Industrial Watertech Logo" />
               <div>
-                <div className="name">SV Industrial Watertech</div>
+                <div className="name">Sri Viranjaneya Industrial Watertech</div>
                 <div className="sub">&amp; Services</div>
               </div>
             </div>
